@@ -18,10 +18,6 @@ public class CreditsFragment extends Fragment {
 
     private CreditsViewModel mViewModel;
 
-    public static CreditsFragment newInstance() {
-        return new CreditsFragment();
-    }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -29,10 +25,8 @@ public class CreditsFragment extends Fragment {
     }
 
     @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(CreditsViewModel.class);
-        // TODO: Use the ViewModel
     }
-
 }
