@@ -82,5 +82,17 @@
         <action
             android:id="@+id/action_dashboardFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_userSettingsFragment"
+            app:destination="@id/userSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSettingsFragment"
+        android:name="com.tuna_salmon.androidapp.dashboard.user_settings.UserSettingsFragment"
+        android:label="user_settings_fragment"
+        tools:layout="@layout/user_settings_fragment" >
+        <action
+            android:id="@+id/action_userSettingsFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
     </fragment>
 </navigation>

@@ -1,5 +1,65 @@
 <resources>
-    <string name="app_name">AndroidApp</string>
+    <string name="app_name">Household Inventory App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="def_item_units">
+        <item>Piece(s)</item>
+        <item>Pack(s)</item>
+        <item>Kg</item>
+        <item>L</item>
+    </string-array>
+
+    <string-array name="operation_type">
+        <item>+</item>
+        <item>-</item>
+    </string-array>
+
+    <string-array name="share_data_perms">
+        <item>None</item>
+        <item>Read Only</item>
+        <item>Read/Write</item>
+    </string-array>
+
+    <string-array name="frequency_type">
+        <item>15 minutes</item>
+        <item>Half Hour</item>
+        <item>Hour</item>
+        <item>Half Day</item>
+        <item>Day</item>
+    </string-array>
+
+    <string name="Change_ID_Def">
+        It changes the public ID of your inventory
+    </string>
+
+    <string name="Change_Lock_State_Def">
+        You may chose to allow or not allow any log-ins from another device(s)
+    </string>
+
+    <string name="Change_Visibility_State_Def">
+        Change how your inventory can be accessed by no account users
+    </string>
+
+    <string name="Delete_Account">
+        This will permanently delete your account
+    </string>
+
+    <string name="channel_name">App Channel</string>
+    <string name="channel_description">Main Notifications Channel</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
 </resources>
