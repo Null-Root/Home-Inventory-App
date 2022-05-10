@@ -1,4 +1,4 @@
-package com.tuna_salmon.androidapp.bulk_edit;
+package com.tuna_salmon.androidapp.inventory.bulk_edit;
 
 import androidx.lifecycle.ViewModel;
 

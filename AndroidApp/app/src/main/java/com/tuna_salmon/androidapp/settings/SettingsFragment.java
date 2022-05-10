@@ -1,4 +1,4 @@
-package com.tuna_salmon.androidapp.bulk_edit;
+package com.tuna_salmon.androidapp.settings;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import com.tuna_salmon.androidapp.R;
 
-public class BulkEditFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
-    private BulkEditViewModel mViewModel;
+    private SettingsViewModel mViewModel;
 
-    public static BulkEditFragment newInstance() {
-        return new BulkEditFragment();
+    public static SettingsFragment newInstance() {
+        return new SettingsFragment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.bulk_edit_fragment, container, false);
+        return inflater.inflate(R.layout.settings_fragment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(BulkEditViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(SettingsViewModel.class);
         // TODO: Use the ViewModel
     }
 
