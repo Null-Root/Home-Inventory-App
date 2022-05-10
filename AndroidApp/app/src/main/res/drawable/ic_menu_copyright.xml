@@ -1,0 +1,18 @@
+<vector android:autoMirrored="true" android:height="512dp"
+    android:viewportHeight="512" android:viewportWidth="512"
+    android:width="512dp" xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:pathData="m512,256c0,141.387 -114.613,256 -256,256s-256,-114.613 -256,-256 114.613,-256 256,-256 256,114.613 256,256zM512,256">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="512" android:endY="256"
+                android:startX="0" android:startY="256" android:type="linear">
+                <item android:color="#FF00F1FF" android:offset="0"/>
+                <item android:color="#FF00D8FF" android:offset="0.231"/>
+                <item android:color="#FF00C0FF" android:offset="0.5138"/>
+                <item android:color="#FF00B2FF" android:offset="0.7773"/>
+                <item android:color="#FF00ADFF" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillColor="#fff" android:pathData="m305.84,205.5c5.855,5.855 15.355,5.855 21.211,0 5.859,-5.859 5.859,-15.355 0,-21.215 -39.176,-39.18 -102.926,-39.18 -142.102,0 -18.98,18.98 -29.434,44.211 -29.434,71.055 0,26.84 10.453,52.07 29.434,71.051 19.586,19.59 45.32,29.383 71.051,29.383s51.465,-9.793 71.055,-29.383c5.855,-5.859 5.855,-15.355 0,-21.215 -5.859,-5.855 -15.355,-5.855 -21.215,0 -27.48,27.48 -72.195,27.48 -99.68,0 -27.48,-27.48 -27.48,-72.195 0,-99.676 27.484,-27.48 72.199,-27.48 99.68,0zM305.84,205.5"/>
+    <path android:fillColor="#fff" android:pathData="m256,84.613c-94.504,0 -171.387,76.883 -171.387,171.387s76.883,171.387 171.387,171.387c31.34,0 62.008,-8.539 88.684,-24.699 7.086,-4.293 9.348,-13.516 5.059,-20.602 -4.293,-7.086 -13.52,-9.352 -20.602,-5.059 -21.988,13.32 -47.281,20.359 -73.141,20.359 -77.961,0 -141.387,-63.426 -141.387,-141.387s63.426,-141.387 141.387,-141.387 141.387,63.426 141.387,141.387c0,27.875 -8.289,55.012 -23.977,78.473 -4.602,6.887 -2.754,16.199 4.133,20.805 6.887,4.602 16.203,2.754 20.809,-4.133 18.996,-28.414 29.035,-61.313 29.035,-95.145 0,-94.504 -76.883,-171.387 -171.387,-171.387zM256,84.613"/>
+</vector>
