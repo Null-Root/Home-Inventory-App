@@ -30,6 +30,9 @@ import com.tuna_salmon.androidapp.ext.ExtFunctions;
 import com.tuna_salmon.androidapp.services.AppService;
 import com.tuna_salmon.androidapp.services.ServiceCollection;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class UserSettingsFragment extends Fragment implements UserSettingsListener {
     private AppService.Data appDataService;
     private AppService.UI appUIService;
@@ -142,11 +145,6 @@ public class UserSettingsFragment extends Fragment implements UserSettingsListen
                     .create();
             builder.show();
         });
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
     }
 
     @Override
