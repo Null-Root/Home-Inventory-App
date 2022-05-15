@@ -24,6 +24,9 @@ import com.tuna_salmon.androidapp.services.ServiceCollection;
 
 import java.util.Objects;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class MainFragment extends Fragment implements View.OnClickListener {
     private AppService.Data appDataService;
     private AppService.UI appUIService;
