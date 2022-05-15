@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey;
 import java.util.Date;
 
 public class BulkEditModel {
-    public String ID;
-    public String Name;
-    public String Desc;
-    public Date LastUpdated;
-    public String PersonLastUpdated;
+    public String bulk_edit_id;
+    public String bulk_edit_name;
+    public String bulk_edit_desc;
+    public String bulk_edit_last_updated;
+    public String bulk_edit_person_last_updated;
 }

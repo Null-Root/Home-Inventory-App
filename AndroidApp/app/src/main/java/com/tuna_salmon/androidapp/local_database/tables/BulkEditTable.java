@@ -10,12 +10,12 @@ import java.util.Date;
 
 @Entity(
         tableName = "bulkEdit_table",
-        primaryKeys = {"bulk_edit_id"},
         indices = {@Index(value = {"bulk_edit_id"}, unique = true)}
 )
 public class BulkEditTable {
     @PrimaryKey
     @ColumnInfo(name = "bulk_edit_id")
+    @NonNull
     public String ID;
 
     @ColumnInfo(name = "bulk_edit_name")
@@ -28,7 +28,7 @@ public class BulkEditTable {
 
     @ColumnInfo(name = "bulk_edit_last_updated")
     @NonNull
-    public Date LastUpdated;
+    public String LastUpdated;
 
     @ColumnInfo(name = "bulk_edit_person_last_updated")
     @NonNull

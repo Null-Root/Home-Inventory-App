@@ -34,7 +34,7 @@ public interface ItemTransaction {
             String Unit,
             double CriticalCount,
             double Price,
-            Date LastUpdated,
+            String LastUpdated,
             String PersonLastUpdated,
             String Category_ID
     );
@@ -51,6 +51,11 @@ public interface ItemTransaction {
             "SELECT * FROM item_table " +
             "WHERE item_category = :Ref_Category_ID AND item_id = :Ref_Item_ID")
     List<ItemModel> read_specific(String Ref_Category_ID, String Ref_Item_ID);
+
+    @Transaction
+    @Query("SELECT item_id FROM item_table " +
+            "WHERE item_name = :Ref_Item_Name")
+    String read_item_id(String Ref_Item_Name);
 
     @Transaction
     @Query("" +
@@ -73,7 +78,7 @@ public interface ItemTransaction {
             String Unit,
             double CriticalCount,
             double Price,
-            Date LastUpdated,
+            String LastUpdated,
             String PersonLastUpdated
     );
 
@@ -90,7 +95,7 @@ public interface ItemTransaction {
             String Ref_Category_ID,
             String Ref_Item_ID,
             double Count,
-            Date LastUpdated,
+            String LastUpdated,
             String PersonLastUpdated
     );
 

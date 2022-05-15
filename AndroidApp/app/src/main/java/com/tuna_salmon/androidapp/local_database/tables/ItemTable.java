@@ -11,7 +11,10 @@ import java.util.Date;
 
 @Entity(
         tableName = "item_table",
-        indices = {@Index(value = {"item_id", "item_name"}, unique = true)},
+        indices = {
+                @Index(value = {"item_id"}, unique = true),
+                @Index(value = {"item_category"}, unique = true)
+        },
         primaryKeys = {"item_id", "item_category"},
         foreignKeys = {
                 @ForeignKey(
@@ -23,8 +26,8 @@ import java.util.Date;
         }
 )
 public class ItemTable {
-    @PrimaryKey
     @ColumnInfo(name = "item_id")
+    @NonNull
     public String ID;
 
     @ColumnInfo(name = "item_name")
@@ -49,13 +52,12 @@ public class ItemTable {
 
     @ColumnInfo(name = "item_last_updated")
     @NonNull
-    public Date LastUpdated;
+    public String LastUpdated;
 
     @ColumnInfo(name = "item_person_last_updated")
     @NonNull
     public String PersonLastUpdated;
 
-    @PrimaryKey
     @ColumnInfo(name = "item_category")
     @NonNull
     public String Category_ID;

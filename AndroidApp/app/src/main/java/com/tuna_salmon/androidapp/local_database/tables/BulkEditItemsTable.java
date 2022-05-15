@@ -27,12 +27,10 @@ import androidx.room.PrimaryKey;
         }
 )
 public class BulkEditItemsTable {
-    @PrimaryKey
     @ColumnInfo(name = "bulk_edit_id")
     @NonNull
     public String BulkEdit_ID;
 
-    @PrimaryKey
     @ColumnInfo(name = "bulk_edit_item_id")
     @NonNull
     public String Item_ID;

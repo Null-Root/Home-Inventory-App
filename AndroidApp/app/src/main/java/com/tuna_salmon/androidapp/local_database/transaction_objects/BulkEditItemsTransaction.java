@@ -28,11 +28,9 @@ public interface BulkEditItemsTransaction {
                 "item_table.item_price " +
             "FROM item_table, bulkEditItems_table " +
             "WHERE " +
-                "bulkEditItems_table.bulk_edit_id = :BulkEdit_ID " +
-            "AND " +
-                "item_table.item_id = :Item_ID"
+                "bulkEditItems_table.bulk_edit_id = :BulkEdit_ID "
     )
-    List<BulkEditItemsModel> read(String BulkEdit_ID, String Item_ID);
+    List<BulkEditItemsModel> read(String BulkEdit_ID);
 
     @Transaction
     @Query("" +

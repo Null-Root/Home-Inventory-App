@@ -14,8 +14,8 @@ public interface BulkEditTransaction {
     @Transaction
     @Query("" +
             "INSERT INTO bulkEdit_table " +
-            "VALUES (:Name, :Desc, :LastUpdated, :PersonLastUpdated)")
-    void create(String ID, String Name, String Desc, Date LastUpdated, String PersonLastUpdated);
+            "VALUES (:ID, :Name, :Desc, :LastUpdated, :PersonLastUpdated)")
+    void create(String ID, String Name, String Desc, String LastUpdated, String PersonLastUpdated);
 
     @Transaction
     @Query("SELECT * FROM bulkEdit_table")
@@ -38,7 +38,7 @@ public interface BulkEditTransaction {
                 "bulk_edit_person_last_updated = :PersonLastUpdated " +
             "WHERE bulk_edit_id = :RefID"
     )
-    void update(String RefID, String Name, String Desc, Date LastUpdated, String PersonLastUpdated);
+    void update(String RefID, String Name, String Desc, String LastUpdated, String PersonLastUpdated);
 
     @Transaction
     @Query("" +

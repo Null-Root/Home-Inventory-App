@@ -10,7 +10,6 @@ import java.util.Date;
 
 @Entity(
         tableName = "category_table",
-        primaryKeys = {"category_id"},
         indices = {@Index(value = {"category_id", "category_name"}, unique = true)}
 )
 public class CategoryTable {
@@ -25,9 +24,9 @@ public class CategoryTable {
 
     @ColumnInfo(name = "category_last_updated")
     @NonNull
-    public Date LastUpdated;
+    public String LastUpdated;
 
-    @ColumnInfo(name = "category_person_last_edited")
+    @ColumnInfo(name = "category_person_last_updated")
     @NonNull
     public String PersonLastUpdated;
 }

@@ -16,7 +16,7 @@ public interface CategoryTransaction {
             "INSERT INTO category_table " +
             "VALUES (:ID, :Name, :LastUpdated, :PersonLastUpdated)"
     )
-    void create(String ID, String Name, Date LastUpdated, String PersonLastUpdated);
+    void create(String ID, String Name, String LastUpdated, String PersonLastUpdated);
 
     @Transaction
     @Query("SELECT * FROM category_table")
@@ -35,13 +35,13 @@ public interface CategoryTransaction {
             "SET " +
                     "category_name = :Name, " +
                     "category_last_updated = :LastUpdated, " +
-                    "category_person_last_edited = :PersonLastUpdated " +
+                    "category_person_last_updated = :PersonLastUpdated " +
             "WHERE category_id = :RefID"
     )
     void update(
             String RefID,
             String Name,
-            Date LastUpdated,
+            String LastUpdated,
             String PersonLastUpdated
     );
 
