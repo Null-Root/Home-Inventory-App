@@ -3,6 +3,7 @@ package com.tuna_salmon.androidapp.services;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.widget.Toast;
@@ -80,15 +81,15 @@ public class AppService {
         //region Loaded App Data
         private String CurrentID = null;
         private String CurrentIDType = null;
-
         private String CurrentName = null;
+        private Bitmap CurrentPic = null;
 
         public String CurrentCategory = null;
         //endregion
 
         private SharedPreferences LocalData = null;
 
-        public void Initialize() {
+        public Data() {
             LocalData = ctx.getSharedPreferences(Const.SharedPrefs.USER_DATA, Context.MODE_PRIVATE);
 
             // Check For Name
@@ -134,16 +135,21 @@ public class AppService {
             // Get SharedPreferences Editor
             SharedPreferences.Editor editor = LocalData.edit();
 
-            if (Data instanceof String)
+            if (Data instanceof String) {
                 editor.putString(Ref_Name, (String) Data);
-            else if (Data instanceof Integer)
+            }
+            else if (Data instanceof Integer) {
                 editor.putInt(Ref_Name, (Integer) Data);
-            else if (Data instanceof Boolean)
+            }
+            else if (Data instanceof Boolean) {
                 editor.putBoolean(Ref_Name, (Boolean) Data);
-            else if (Data instanceof Float)
+            }
+            else if (Data instanceof Float) {
                 editor.putFloat(Ref_Name, (Float) Data);
-            else if (Data instanceof Long)
+            }
+            else if (Data instanceof Long) {
                 editor.putLong(Ref_Name, (Long) Data);
+            }
 
             editor.apply();
 
@@ -168,7 +174,6 @@ public class AppService {
                     .apply();
 
             // Load to Variables
-
         }
 
         public void setIDInstance(String ID, String IDType) {
@@ -179,9 +184,17 @@ public class AppService {
             onMainDataChanged();
         }
 
+        public void setAccountInfo(String ID, String Name, Bitmap Pic) {
+            CurrentName = Name;
+            CurrentID = ID;
+            CurrentPic = Pic;
+
+            // Call On Data Change
+            onMainDataChanged();
+        }
+
         public boolean isAccountRegistered() {
             return false;
         }
     }
-
 }
