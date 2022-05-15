@@ -29,6 +29,9 @@ import com.tuna_salmon.androidapp.services.ServiceCollection;
 
 import java.util.Map;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class DashboardFragment extends Fragment {
     private AppService.Data appDataService;
     private AppService.UI appUIService;
@@ -114,7 +117,7 @@ public class DashboardFragment extends Fragment {
         });
 
         view.findViewById(R.id.dashboardRegisterButton).setOnClickListener(v -> {
-            //navController.navigate(R.id.action_dashboardFragment_to_accountFragment);
+            navController.navigate(R.id.action_dashboardFragment_to_accountFragment);
         });
     }
 
