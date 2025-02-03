@@ -1,0 +1,116 @@
+#middle {
+    background-color: $middle-bg-color;
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+
+    @include media(">0px", "<=large_phone") {
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    @include media(">large_phone", "<=tablet") {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    @include media(">tablet") {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+
+    .container {
+        transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        background-color: $card-def-bg;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 200px;
+        height: auto;
+
+        img {
+            margin-top: 3rem;
+        }
+
+        button {
+            margin-bottom: 2rem;
+            padding: 8px;
+            color: black;
+        }
+
+        .attribution {
+            color: $vendor-icon-txt;
+            font: 12px $user-font;
+            margin: 2rem 0px;
+
+            a {
+                color: $vendor-icon-txt;
+                text-decoration: none;
+            }
+        }
+
+        &:hover {
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: scale(1.1, 1.1);
+        }
+
+        @include media(">0px", "<=large_phone") {
+            width: 120px;
+
+            img {
+                width: 35px;
+                height: 35px;
+                margin-top: 1.5rem;
+            }
+
+            button {
+                margin-bottom: 1.2rem;
+                padding: 0.25rem;
+                font-size: 10px;
+            }
+
+            .attribution {
+                margin: 1.2rem 0px;
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+#original-download {
+    box-shadow: 0 4px 8px 0 $original-download-card-bg;
+
+    button {
+        @include cool_btn_style($original-download-card-bg, adjust-color($original-download-card-bg, $lightness: -30%, $alpha: 0.1));
+
+        &:hover {
+            background-color: adjust-color($original-download-card-bg, $lightness: -10%, $alpha: -0.5);
+            color: white;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 5px 10px 0 $original-download-card-bg;
+    }
+}
+
+
+#beta-download {
+    box-shadow: 0 4px 8px 0 $beta-download-card-bg;
+
+    button {
+        @include cool_btn_style($beta-download-card-bg, adjust-color($beta-download-card-bg, $lightness: -30%, $alpha: 0.1));
+
+        &:hover {
+            background-color: adjust-color($beta-download-card-bg, $lightness: -10%, $alpha: -0.5);
+            color: white;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 5px 10px 0 $beta-download-card-bg;
+    }
+}

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.tuna_salmon.home_inventory_app.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_categoryFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/categoryFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_mainFragment_to_dashboardFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/dashboardFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_mainFragment_to_multiEditFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/multiEditFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/settingsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_mainFragment_to_creditsFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/creditsFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.tuna_salmon.home_inventory_app.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_accountFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/accountFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_dashboardFragment_to_mainFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/mainFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_dashboardFragment_to_userSettingsFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/userSettingsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_dashboardFragment_to_inventoryDataAccessFragment"
+            app:destination="@id/inventoryDataAccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.tuna_salmon.home_inventory_app.inventory.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_itemFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/itemFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_categoryFragment_to_mainFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/mainFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="com.tuna_salmon.home_inventory_app.inventory.item.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <action
+            android:id="@+id/action_itemFragment_to_categoryFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/categoryFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/multiEditFragment"
+        android:name="com.tuna_salmon.home_inventory_app.multi_edit.MultiEditFragment"
+        android:label="fragment_multi_edit"
+        tools:layout="@layout/fragment_multi_edit" >
+        <action
+            android:id="@+id/action_multiEditFragment_to_mainFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.tuna_salmon.home_inventory_app.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_mainFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.tuna_salmon.home_inventory_app.dashboard.account.AccountFragment"
+        android:label="sub_fragment_account"
+        tools:layout="@layout/sub_fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_accountConfirm"
+            app:launchSingleTop="true"
+            app:destination="@id/accountConfirmationFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_dashboardFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountConfirmationFragment"
+        android:name="com.tuna_salmon.home_inventory_app.dashboard.account.confirm.ConfirmFragment"
+        android:label="sub_fragment_account_confirmation"
+        tools:layout="@layout/sub_fragment_confirm" >
+        <action
+            android:id="@+id/action_accountConfirmationFragment_to_dashboardFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_accountConfirmationFragment_to_accountFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/accountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSettingsFragment"
+        android:name="com.tuna_salmon.home_inventory_app.dashboard.user_settings.UserSettingsFragment"
+        android:label="sub_fragment_user_settings"
+        tools:layout="@layout/sub_fragment_user_settings" >
+        <action
+            android:id="@+id/action_userSettingsFragment_to_dashboardFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventoryDataAccessFragment"
+        android:name="com.tuna_salmon.home_inventory_app.dashboard.inventory_data_access.InventoryDataAccessFragment"
+        android:label="sub_fragment_inventory_data_access"
+        tools:layout="@layout/sub_fragment_inventory_data_access" >
+        <action
+            android:id="@+id/action_inventoryDataAccessFragment_to_dashboardFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/dashboardFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.tuna_salmon.home_inventory_app.credits.CreditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" >
+        <action
+            android:id="@+id/action_creditsFragment_to_mainFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/mainFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+</navigation>

@@ -1,0 +1,24 @@
+#bottom {
+    background-color: $bottom-bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    
+    p {
+        color: white;
+        padding: auto;
+        font: 14px $user-font;
+
+        span {
+            color: aqua;
+        }
+    }
+
+    @include media(">0px", "<=large_phone") {
+        p {
+            font-size: 10px;
+        }
+    }
+}

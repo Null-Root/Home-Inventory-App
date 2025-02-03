@@ -1,0 +1,32 @@
+#top {
+    background-color: $top-bg-color;
+    width: 100%;
+    height: 15%;
+
+    #title {
+        padding-top: 15px;
+        padding-bottom: 10px;
+        font: 30px $user-font;
+    }
+
+    #desc {
+        font: 15px $user-font;
+        margin: 10px 0px;
+    }
+
+    hr {
+        margin: auto;
+        width: 50%;
+    }
+
+    @include media(">0px", "<=large_phone") {
+        #title {
+            font-size: 20px;
+        }
+
+        #desc {
+            font-size: 10px;
+            margin: 12px 0px;
+        }
+    }
+}

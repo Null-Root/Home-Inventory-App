@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemSubContainer"
+        android:layout_width="300dp"
+        android:layout_height="65dp"
+        app:cardBackgroundColor="@color/blue_50"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/itemNameHolder"
+            android:layout_gravity="center_vertical|left"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Sample Item"
+            android:textColor="@color/black"
+            android:textSize="17.5sp" />
+
+        <ImageView
+            android:id="@+id/itemSettingsHolder"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="70dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="settings"
+            android:src="@drawable/ic_settings_24" />
+
+        <ImageView
+            android:id="@+id/itemDeleteHolder"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="delete"
+            android:src="@drawable/ic_delete_mini" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/itemCountHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemSubContainer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Show Detailed Item Data -->
+    <LinearLayout
+        android:id="@+id/itemShowItemDetailed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#a2ebc9"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/itemShowItemDetailedName"
+            android:text="Item Name"
+            android:padding="15dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Item Count: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/itemShowItemDetailedCount"
+                android:text="10"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Item Price: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/itemShowItemDetailedPrice"
+                android:text="10"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Item Unit: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/itemShowItemDetailedUnit"
+                android:text="Piece"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Last Edited: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/itemShowItemDetailedLastEdited"
+                android:text="Apr-5-2021"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Last Edited by: "
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/itemShowItemDetailedPersonLastEdited"
+                android:text="Sample Name"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
