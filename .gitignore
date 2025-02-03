@@ -1,3 +1,9 @@
+# App Metadata
+.ts_app_info
+
+# API Folder
+/Web API
+
 # Built application files
 *.apk
 *.aar
@@ -83,3 +89,6 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+
+.priv
